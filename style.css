@@ -1,2 +1,5 @@
 /* Main stylesheet for the project */
 /* To be replaced later when using Polymer */
+body {
+	text-align: center;
+}
