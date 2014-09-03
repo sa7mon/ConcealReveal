@@ -3,6 +3,11 @@
 			Created by: sa7mon {dan.sa7mon(at)gmail.com}
 			Project Created on: 9/2/14
 	*/
+
+	function saveIP ($ip) {
+		setcookie("TestCookie", $ip);
+	}
+
 	//Refer to flowchart sketch for process design
 
 	//First, let's check to see if there's a cookie set for this user.
