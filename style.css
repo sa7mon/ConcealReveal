@@ -3,3 +3,6 @@
 body {
 	text-align: center;
 }
+span.ip {
+	color: red;
+}
