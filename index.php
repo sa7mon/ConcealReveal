@@ -63,11 +63,11 @@
 			<form name="startmonitor" action="monitor.php" action="GET">
 				Check Interval: 
 				<select name="timeout">
-					<option value="1500">15s</option>
-					<option value="3000">30s</option>
-					<option value="6000">1m</option>
-					<option value="30000">5m</option>
-					<option value="60000">10m</option>
+					<option value="15">15s</option>
+					<option value="30">30s</option>
+					<option value="60">1m</option>
+					<option value="300">5m</option>
+					<option value="600">10m</option>
 				</select>
 				<br />
 				<br />
