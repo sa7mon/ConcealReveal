@@ -53,26 +53,29 @@
 				} else {
 					// User doesn't have a saved IP. Offer to save it.
 					echo "<form name='saveip' action='index.php' method='POST'>";
-					echo "Your current IP is: <span class='ip'><input type='text' name='iptosave' value=".$_SERVER['REMOTE_ADDR']." readonly></span><br />";
+					echo "Your current IP is: <span class='ip'>
+						<input type='text' name='iptosave' value=".$_SERVER['REMOTE_ADDR']." readonly></span><br />";
 					echo "<input type='submit' value='Save my IP locally' /><br />";
 					echo "</form>";
 				};
 			?>
 			<br />
-			Check Interval: 
-			<select name="timeout">
-				<option value="1500">15s</option>
-				<option value="3000">30s</option>
-				<option value="6000">1m</option>
-				<option value="30000">5m</option>
-				<option value="60000">10m</option>
-			</select>
-			<br />
-			<br />
-			<?php
-				//echo ($cookieSet ? "<input type='hidden' value=".$cookieIP." />": "<input type='hidden' value=".$_SERVER['REMOTE_ADDR']." />");
-			?>
-			<input type="submit" value="Start Monitoring" />
+			<form name="startmonitor" action="monitor.php" action="GET">
+				Check Interval: 
+				<select name="timeout">
+					<option value="1500">15s</option>
+					<option value="3000">30s</option>
+					<option value="6000">1m</option>
+					<option value="30000">5m</option>
+					<option value="60000">10m</option>
+				</select>
+				<br />
+				<br />
+				<?php
+					//echo ($cookieSet ? "<input type='hidden' value=".$cookieIP." />": "<input type='hidden' value=".$_SERVER['REMOTE_ADDR']." />");
+				?>
+				<input type="submit" value="Start Monitoring" />
+			</form>
 		</div>
 		<div class="footer">
 			<br />
